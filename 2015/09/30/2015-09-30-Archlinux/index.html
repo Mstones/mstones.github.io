@@ -45,7 +45,7 @@
 <meta property="og:url" content="mstones.github.io/2015/09/30/2015-09-30-Archlinux/index.html">
 <meta property="og:site_name" content="Mstones">
 <meta property="og:description" content="archlinux是我在14年4月份开始接触的,下面我就对arch的一些常用的软件和日常的操作分享一下.">
-<meta property="og:updated_time" content="2015-09-30T16:00:55.253Z">
+<meta property="og:updated_time" content="2015-10-01T04:07:00.433Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Archlinux日常">
 <meta name="twitter:description" content="archlinux是我在14年4月份开始接触的,下面我就对arch的一些常用的软件和日常的操作分享一下.">
@@ -247,7 +247,9 @@
 <span class="variable">$ </span>makepkg -si <span class="constant">PKGBUILD</span>
 </code></pre><p>如果是.tar.xz可以直接用:</p>
 <pre><code>$ sudo pacman -U software_name<span class="class">.tar</span><span class="class">.xz</span>
-</code></pre><h1 id="Summary">Summary</h1><p>对于其他问题可以在官方Wiki或论坛里自行搜索,主要有:<br><a href="https://wiki.archlinux.org" target="_blank" rel="external">Archlinux Wiki</a><br><a href="https://bbs.archlinux.org" target="_blank" rel="external">Archlinux论坛</a><br><a href="https://bbs.archlinuxcn.org" target="_blank" rel="external">Archlinux中文论坛</a><br><a href="https://archlinux.tw" target="_blank" rel="external">Archlinux臺灣社群</a></p>
+</code></pre><h1 id="常用脚本语言–Perl">常用脚本语言–Perl</h1><p>目前不写什么大的程序(也写不了),只是做一些小的,日常用的启动脚本.比如扩展屏幕:<br><figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/perl -w</span></span><br><span class="line"> <span class="keyword">use</span> strict;</span><br><span class="line"> <span class="keyword">system</span> <span class="string">"xrandr -output VGA-0 --auto --right-of LVDS --auto"</span>;</span><br></pre></td></tr></table></figure></p>
+<p>如果每天都要敲那么一大行确实够累的,写成一个小脚本的话,每次只需运行一下脚本就可以启动了,简单方便.</p>
+<h1 id="Summary">Summary</h1><p>对于其他问题可以在官方Wiki或论坛里自行搜索,主要有:<br><a href="https://wiki.archlinux.org" target="_blank" rel="external">Archlinux Wiki</a><br><a href="https://bbs.archlinux.org" target="_blank" rel="external">Archlinux论坛</a><br><a href="https://bbs.archlinuxcn.org" target="_blank" rel="external">Archlinux中文论坛</a><br><a href="https://archlinux.tw" target="_blank" rel="external">Archlinux臺灣社群</a></p>
 </span>
       
     </div>
@@ -379,7 +381,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#常用软件及工具"><span class="nav-number">1.</span> <span class="nav-text">常用软件及工具</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#日常操作"><span class="nav-number">2.</span> <span class="nav-text">日常操作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#系统更新"><span class="nav-number">2.1.</span> <span class="nav-text">系统更新</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#软件安装/卸载"><span class="nav-number">2.2.</span> <span class="nav-text">软件安装/卸载</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#从官方库安装"><span class="nav-number">2.2.1.</span> <span class="nav-text">从官方库安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#从AUR安装"><span class="nav-number">2.2.2.</span> <span class="nav-text">从AUR安装</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Summary"><span class="nav-number">3.</span> <span class="nav-text">Summary</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#常用软件及工具"><span class="nav-number">1.</span> <span class="nav-text">常用软件及工具</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#日常操作"><span class="nav-number">2.</span> <span class="nav-text">日常操作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#系统更新"><span class="nav-number">2.1.</span> <span class="nav-text">系统更新</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#软件安装/卸载"><span class="nav-number">2.2.</span> <span class="nav-text">软件安装/卸载</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#从官方库安装"><span class="nav-number">2.2.1.</span> <span class="nav-text">从官方库安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#从AUR安装"><span class="nav-number">2.2.2.</span> <span class="nav-text">从AUR安装</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#常用脚本语言–Perl"><span class="nav-number">3.</span> <span class="nav-text">常用脚本语言–Perl</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Summary"><span class="nav-number">4.</span> <span class="nav-text">Summary</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
