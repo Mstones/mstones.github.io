@@ -39,22 +39,16 @@
   <link rel="shorticon icon" type="image/x-icon" href="/images/M.jpg?v=0.4.5.1" />
 
 
-<meta name="description" content="#基于Verilog的频率计
-
-写了个频率计,感觉精度还可以,贴一下.">
+<meta name="description" content="写了个频率计,感觉精度还可以,贴一下.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="基于Verilog的频率计">
 <meta property="og:url" content="mstones.github.io/2015/10/20/2015-10-20-Verilog-frequent/index.html">
 <meta property="og:site_name" content="Mstones">
-<meta property="og:description" content="#基于Verilog的频率计
-
-写了个频率计,感觉精度还可以,贴一下.">
-<meta property="og:updated_time" content="2015-10-20T14:49:19.766Z">
+<meta property="og:description" content="写了个频率计,感觉精度还可以,贴一下.">
+<meta property="og:updated_time" content="2015-10-20T14:50:44.699Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="基于Verilog的频率计">
-<meta name="twitter:description" content="#基于Verilog的频率计
-
-写了个频率计,感觉精度还可以,贴一下.">
+<meta name="twitter:description" content="写了个频率计,感觉精度还可以,贴一下.">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -222,8 +216,7 @@
       
 
       
-        <span itemprop="articleBody"><p>#基于Verilog的频率计</p>
-<blockquote>
+        <span itemprop="articleBody"><blockquote>
 <p>写了个频率计,感觉精度还可以,贴一下.<br><a id="more"></a></p>
 <h2 id="功能">功能</h2><p>用DE2实现,用8位七段数码管显示测的的频率,生成若干待测频率,用开关进行频率切换.具体实现如下</p>
 <p>##三-八译码器<br>数码管现实离不开三-八译码器<br><figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">module decoder(</span><br><span class="line">	input [3:0]i,</span><br><span class="line">	output [6:0]led</span><br><span class="line">	)<span class="comment">;</span></span><br><span class="line">parameter       _0 = 8'b<span class="number">1100_0000</span>,</span><br><span class="line">	      	_1 = 8'b<span class="number">1111_1001</span>,</span><br><span class="line">		_2 = 8'b<span class="number">1010_0100</span>, </span><br><span class="line">                _3 = 8'b<span class="number">1011_0000</span>,</span><br><span class="line">		_4 = 8'b<span class="number">1001_1001</span>,</span><br><span class="line">    		_5 = 8'b<span class="number">1001_0010</span>, </span><br><span class="line">                _6 = 8'b<span class="number">1000_0010</span>,</span><br><span class="line">		_7 = 8'b<span class="number">1111_1000</span>,</span><br><span class="line">     		_8 = 8'b<span class="number">1000_0000</span>,</span><br><span class="line">                _9 = 8'b<span class="number">1001_0000</span>,</span><br><span class="line">    		_A = 8'b<span class="number">1000_1000</span>,</span><br><span class="line">		_B = 8'b<span class="number">1000_0011</span>,</span><br><span class="line">                _C = 8'b<span class="number">1100_0110</span>,</span><br><span class="line">		_D = 8'b<span class="number">1010_0001</span>,</span><br><span class="line">		_E = 8'b<span class="number">1000_0110</span>,</span><br><span class="line">                _F = 8'b<span class="number">1000_1110</span><span class="comment">; </span></span><br><span class="line"></span><br><span class="line">reg [7:0]led_temp<span class="comment">;</span></span><br><span class="line">always @(i)</span><br><span class="line">	begin </span><br><span class="line">				case(i)</span><br><span class="line">					4'd0: led_temp = _0<span class="comment">;</span></span><br><span class="line">					4'd1: led_temp = _1<span class="comment">;</span></span><br><span class="line">					4'd2: led_temp = _2<span class="comment">;</span></span><br><span class="line">					4'd3: led_temp = _3<span class="comment">;</span></span><br><span class="line">					4'd4: led_temp = _4<span class="comment">;</span></span><br><span class="line">					4'd5: led_temp = _5<span class="comment">; </span></span><br><span class="line">					4'd6: led_temp = _6<span class="comment">;</span></span><br><span class="line">					4'd7: led_temp = _7<span class="comment">;</span></span><br><span class="line">					4'd8: led_temp = _8<span class="comment">;</span></span><br><span class="line">					4'd9: led_temp = _9<span class="comment">;</span></span><br><span class="line">					4'hA: led_temp = _A<span class="comment">;</span></span><br><span class="line">					4'hB: led_temp = _B<span class="comment">;</span></span><br><span class="line">					4'hC: led_temp = _C<span class="comment">;</span></span><br><span class="line">					4'hD: led_temp = _D<span class="comment">;</span></span><br><span class="line">					4'hE: led_temp = _E<span class="comment">;</span></span><br><span class="line">					4'hF: led_temp = _F<span class="comment">;</span></span><br><span class="line">					default: led_temp = _0<span class="comment">;</span></span><br><span class="line">				endcase</span><br><span class="line">	end</span><br><span class="line">	</span><br><span class="line">assign led = led_temp[6:0]<span class="comment">;</span></span><br><span class="line"></span><br><span class="line">endmodule</span><br></pre></td></tr></table></figure></p>
