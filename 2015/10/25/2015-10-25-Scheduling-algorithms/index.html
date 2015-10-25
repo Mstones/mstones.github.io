@@ -30,7 +30,7 @@
 
 
 
-  <meta name="keywords" content="成长," />
+  <meta name="keywords" content="OS," />
 
 
 
@@ -39,16 +39,19 @@
   <link rel="shorticon icon" type="image/x-icon" href="/images/M.jpg?v=0.4.5.1" />
 
 
-<meta name="description" content="由于本人记忆力比较差，想通过博客来帮助记忆，非常幸运的是在网上发现了hexo+github,最大的优点是免费。经过一天的折腾博客总算是建起来了，建立此博客并不是为了访问量，纯属为了辅助记忆，如果同学不幸进入还请留下点什么，不胜感激.">
+<meta name="description" content="描述
+调度算法:对现有的资源进行分配,使CPU的利用率最大化">
 <meta property="og:type" content="article">
-<meta property="og:title" content="开博第一篇">
-<meta property="og:url" content="mstones.github.io/2015/09/26/2015-09-26-artical_first/index.html">
+<meta property="og:title" content="Scheduling-algorithms">
+<meta property="og:url" content="mstones.github.io/2015/10/25/2015-10-25-Scheduling-algorithms/index.html">
 <meta property="og:site_name" content="Mstones">
-<meta property="og:description" content="由于本人记忆力比较差，想通过博客来帮助记忆，非常幸运的是在网上发现了hexo+github,最大的优点是免费。经过一天的折腾博客总算是建起来了，建立此博客并不是为了访问量，纯属为了辅助记忆，如果同学不幸进入还请留下点什么，不胜感激.">
-<meta property="og:updated_time" content="2015-09-28T15:22:45.960Z">
+<meta property="og:description" content="描述
+调度算法:对现有的资源进行分配,使CPU的利用率最大化">
+<meta property="og:updated_time" content="2015-10-25T15:16:08.879Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="开博第一篇">
-<meta name="twitter:description" content="由于本人记忆力比较差，想通过博客来帮助记忆，非常幸运的是在网上发现了hexo+github,最大的优点是免费。经过一天的折腾博客总算是建起来了，建立此博客并不是为了访问量，纯属为了辅助记忆，如果同学不幸进入还请留下点什么，不胜感激.">
+<meta name="twitter:title" content="Scheduling-algorithms">
+<meta name="twitter:description" content="描述
+调度算法:对现有的资源进行分配,使CPU的利用率最大化">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -58,7 +61,7 @@
   };
 </script>
 
-  <title> 开博第一篇 | Mstones </title>
+  <title> Scheduling-algorithms | Mstones </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -173,7 +176,7 @@
           
           
             
-              开博第一篇
+              Scheduling-algorithms
             
           
         </h1>
@@ -182,8 +185,8 @@
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-09-26T21:14:00+08:00" content="2015-09-26">
-            2015-09-26
+          <time itemprop="dateCreated" datetime="2015-10-25T21:58:32+08:00" content="2015-10-25">
+            2015-10-25
           </time>
         </span>
 
@@ -192,8 +195,8 @@
             &nbsp; | &nbsp; 分类于
             
               <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/log/" itemprop="url" rel="index">
-                  <span itemprop="name">log</span>
+                <a href="/categories/Algorithms/" itemprop="url" rel="index">
+                  <span itemprop="name">Algorithms</span>
                 </a>
               </span>
 
@@ -216,7 +219,268 @@
       
 
       
-        <span itemprop="articleBody"><p>  由于本人记忆力比较差，想通过博客来帮助记忆，非常幸运的是在网上发现了<a href="http://hexo.io" target="_blank" rel="external">hexo</a>+<a href="https://github.com/" target="_blank" rel="external">github</a>,最大的优点是免费。经过一天的折腾博客总算是建起来了，建立此博客并不是为了访问量，纯属为了辅助记忆，如果同学不幸进入还请留下点什么，不胜感激.</p>
+        <span itemprop="articleBody"><h1 id="描述">描述</h1><blockquote>
+<p>调度算法:对现有的资源进行分配,使CPU的利用率最大化<br><a id="more"></a></p>
+<h1 id="分类">分类</h1><ul>
+<li>FCFS(先来先服务)</li>
+<li>SJF(最短作业优先)</li>
+<li>PS(优先权调度)</li>
+<li>RRS(轮转调度)</li>
+<li>MQS(多级队列调度)</li>
+</ul>
+</blockquote>
+<h2 id="FCFS">FCFS</h2><p><strong>先到先服务</strong>即先请求CPU的进程先分配到CPU,类似于FIFO队列.</p>
+<table>
+<thead>
+<tr>
+<th>Process</th>
+<th>Burst Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P1</td>
+<td>24</td>
+</tr>
+<tr>
+<td>P2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>P3</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p>对应的Gantt chart为:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">P1</th>
+<th style="text-align:right">P2</th>
+<th style="text-align:right">P3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">24</td>
+<td style="text-align:right">27</td>
+<td style="text-align:right">30</td>
+</tr>
+</tbody>
+</table>
+<h2 id="SJF">SJF</h2><p><strong>最短作业优先调度算法</strong>将每个进程与其下一个CPU区间段相关联.当CPU为空时,它会赋给具有最短CPU区间的进程.如果两个进程具有相同的长度,那么可以使用FCFS调度来处理.</p>
+<h3 id="就绪队列无新进程到达">就绪队列无新进程到达</h3><p>当就绪队列无新值到达时,按正常的程序执行.</p>
+<table>
+<thead>
+<tr>
+<th>Process</th>
+<th>Burst Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P1</td>
+<td>6</td>
+</tr>
+<tr>
+<td>P2</td>
+<td>8</td>
+</tr>
+<tr>
+<td>P3</td>
+<td>7</td>
+</tr>
+<tr>
+<td>P4</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p>对应的Gantt chart为:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">P4</th>
+<th style="text-align:right">P1</th>
+<th style="text-align:right">P3</th>
+<th style="text-align:right">P2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">3</td>
+<td style="text-align:right">9</td>
+<td style="text-align:right">16</td>
+<td style="text-align:right">24</td>
+</tr>
+</tbody>
+</table>
+<h3 id="就绪队列有新进程到达">就绪队列有新进程到达</h3><p>SJF可以是抢占式或非抢占的,当一个新进程到达就绪队列而以前的进程正在执行时,就需要进行判断.与当前进程相比,新的进程比当前进程有更短的CPU区间,抢占SJF算法可抢占当前运行的进程,运行新的进程,而非抢占SJF算法会允许当前运行的进程先完成其CPU区间,然后在进行新的判断.</p>
+<table>
+<thead>
+<tr>
+<th>Process</th>
+<th>Arrival Time</th>
+<th>Burst Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P1</td>
+<td>0</td>
+<td>6</td>
+</tr>
+<tr>
+<td>P2</td>
+<td>1</td>
+<td>8</td>
+</tr>
+<tr>
+<td>P3</td>
+<td>2</td>
+<td>7</td>
+</tr>
+<tr>
+<td>P4</td>
+<td>3</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p>对应Gantt chart为:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">P1</th>
+<th style="text-align:right">P2</th>
+<th style="text-align:right">P4</th>
+<th style="text-align:right">P1</th>
+<th style="text-align:right">P3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">1</td>
+<td style="text-align:right">5</td>
+<td style="text-align:right">10</td>
+<td style="text-align:right">17</td>
+<td style="text-align:right">26</td>
+</tr>
+</tbody>
+</table>
+<h2 id="PS">PS</h2><p>每个进程都有一个优先级与其关联,具有最高优先级的进程会分配到CPU.具有相同优先级的进程按FCFS顺序调度.一般是数越小优先级越小(不完全是,根据系统而定).</p>
+<table>
+<thead>
+<tr>
+<th>Process</th>
+<th>Burst Time</th>
+<th>Priority</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P1</td>
+<td>10</td>
+<td>3</td>
+</tr>
+<tr>
+<td>P2</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>P3</td>
+<td>2</td>
+<td>4</td>
+</tr>
+<tr>
+<td>P4</td>
+<td>1</td>
+<td>5</td>
+</tr>
+<tr>
+<td>P5</td>
+<td>5</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<p>对应的Gantt chart为:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">P2</th>
+<th style="text-align:right">P5</th>
+<th style="text-align:right">P1</th>
+<th style="text-align:right">P3</th>
+<th style="text-align:right">P4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">1</td>
+<td style="text-align:right">6</td>
+<td style="text-align:right">16</td>
+<td style="text-align:right">18</td>
+<td style="text-align:right">19</td>
+</tr>
+</tbody>
+</table>
+<h2 id="RRS">RRS</h2><p><strong>RRS</strong>是专门为分时系统设计的.用RRS调度时,队列中没有进程被分配超过一个时间片(quantum)的CPU时间(除非它是唯一可运行的进程).如果进程的CPU区间超过一个时间片,那么该进程会被抢占,而被放回到就绪队列中.</p>
+<blockquote>
+<p>设 quantum=4(ms)</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Process</th>
+<th>Burst Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P1</td>
+<td>24</td>
+</tr>
+<tr>
+<td>P2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>P3</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p>对应Gantt chart为:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:right">P1</th>
+<th style="text-align:right">P2</th>
+<th style="text-align:right">P3</th>
+<th style="text-align:right">P1</th>
+<th style="text-align:right">P1</th>
+<th style="text-align:right">P1</th>
+<th style="text-align:right">P1</th>
+<th style="text-align:right">P1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">4</td>
+<td style="text-align:right">7</td>
+<td style="text-align:right">10</td>
+<td style="text-align:right">14</td>
+<td style="text-align:right">18</td>
+<td style="text-align:right">22</td>
+<td style="text-align:right">26</td>
+<td style="text-align:right">30</td>
+</tr>
+</tbody>
+</table>
+<h2 id="MQS">MQS</h2><p><strong>多级队列调度</strong>(暂时没弄明白,待续)</p>
 </span>
       
     </div>
@@ -225,7 +489,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/成长/" rel="tag">#成长</a>
+            <a href="/tags/OS/" rel="tag">#OS</a>
           
         </div>
       
@@ -234,11 +498,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/09/27/2015-09-27-Festival/" rel="prev">Festival</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/10/20/2015-10-20-Verilog-frequent/" rel="next">基于Verilog的频率计</a>
             
           </div>
         </div>
@@ -348,7 +612,7 @@
           <div class="post-toc">
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#描述"><span class="nav-number">1.</span> <span class="nav-text">描述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分类"><span class="nav-number">2.</span> <span class="nav-text">分类</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#FCFS"><span class="nav-number">2.1.</span> <span class="nav-text">FCFS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SJF"><span class="nav-number">2.2.</span> <span class="nav-text">SJF</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#就绪队列无新进程到达"><span class="nav-number">2.2.1.</span> <span class="nav-text">就绪队列无新进程到达</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#就绪队列有新进程到达"><span class="nav-number">2.2.2.</span> <span class="nav-text">就绪队列有新进程到达</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PS"><span class="nav-number">2.3.</span> <span class="nav-text">PS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#RRS"><span class="nav-number">2.4.</span> <span class="nav-text">RRS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MQS"><span class="nav-number">2.5.</span> <span class="nav-text">MQS</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
