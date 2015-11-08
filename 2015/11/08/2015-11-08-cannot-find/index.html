@@ -30,7 +30,7 @@
 
 
 
-  <meta name="keywords" content="FPGA," />
+  <meta name="keywords" content="Errors," />
 
 
 
@@ -39,16 +39,19 @@
   <link rel="shorticon icon" type="image/x-icon" href="/images/M.jpg?v=0.4.5.1" />
 
 
-<meta name="description" content="Quartus ii Quartus ii 对于FPGA开发的朋友应该不陌生,刚接触FPGA时,应该有很大部分朋友用的是它.在IC领域的用的操作环境几乎全是UNIX/Linux环境,下面就如何在linux下安装Quartus ii进行简单介绍.">
+<meta name="description" content="铺垫
+今天逛知乎,发现一款小工具叫FZF.于是特意查了一下据说速度是Find的2**n,评价还不错,但毕竟不是亲身体验,不敢乱说,就想亲自体验一把在评价,结果问题来了.因为我是Arch用户习惯了在AUR上拽包安装,当然也可以从Github上clone下来安装.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Quartus ii for linux">
-<meta property="og:url" content="mstones.github.io/2015/10/05/Quartus-ii-for-linux/index.html">
+<meta property="og:title" content="/usr/lib/ld; cannot find -lxxxx">
+<meta property="og:url" content="mstones.github.io/2015/11/08/2015-11-08-cannot-find/index.html">
 <meta property="og:site_name" content="Mstones">
-<meta property="og:description" content="Quartus ii Quartus ii 对于FPGA开发的朋友应该不陌生,刚接触FPGA时,应该有很大部分朋友用的是它.在IC领域的用的操作环境几乎全是UNIX/Linux环境,下面就如何在linux下安装Quartus ii进行简单介绍.">
-<meta property="og:updated_time" content="2015-10-05T03:06:21.005Z">
+<meta property="og:description" content="铺垫
+今天逛知乎,发现一款小工具叫FZF.于是特意查了一下据说速度是Find的2**n,评价还不错,但毕竟不是亲身体验,不敢乱说,就想亲自体验一把在评价,结果问题来了.因为我是Arch用户习惯了在AUR上拽包安装,当然也可以从Github上clone下来安装.">
+<meta property="og:updated_time" content="2015-11-08T07:56:07.535Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Quartus ii for linux">
-<meta name="twitter:description" content="Quartus ii Quartus ii 对于FPGA开发的朋友应该不陌生,刚接触FPGA时,应该有很大部分朋友用的是它.在IC领域的用的操作环境几乎全是UNIX/Linux环境,下面就如何在linux下安装Quartus ii进行简单介绍.">
+<meta name="twitter:title" content="/usr/lib/ld; cannot find -lxxxx">
+<meta name="twitter:description" content="铺垫
+今天逛知乎,发现一款小工具叫FZF.于是特意查了一下据说速度是Find的2**n,评价还不错,但毕竟不是亲身体验,不敢乱说,就想亲自体验一把在评价,结果问题来了.因为我是Arch用户习惯了在AUR上拽包安装,当然也可以从Github上clone下来安装.">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -58,7 +61,7 @@
   };
 </script>
 
-  <title> Quartus ii for linux | Mstones </title>
+  <title> /usr/lib/ld; cannot find -lxxxx | Mstones </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -173,7 +176,7 @@
           
           
             
-              Quartus ii for linux
+              /usr/lib/ld; cannot find -lxxxx
             
           
         </h1>
@@ -182,8 +185,8 @@
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-10-05T10:56:00+08:00" content="2015-10-05">
-            2015-10-05
+          <time itemprop="dateCreated" datetime="2015-11-08T15:29:41+08:00" content="2015-11-08">
+            2015-11-08
           </time>
         </span>
 
@@ -192,8 +195,8 @@
             &nbsp; | &nbsp; 分类于
             
               <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/Software-install/" itemprop="url" rel="index">
-                  <span itemprop="name">Software-install</span>
+                <a href="/categories/Arch/" itemprop="url" rel="index">
+                  <span itemprop="name">Arch</span>
                 </a>
               </span>
 
@@ -216,28 +219,27 @@
       
 
       
-        <span itemprop="articleBody"><h1 id="Quartus_ii">Quartus ii</h1><p> Quartus ii 对于FPGA开发的朋友应该不陌生,刚接触FPGA时,应该有很大部分朋友用的是它.在IC领域的用的操作环境几乎全是UNIX/Linux环境,下面就如何在linux下安装Quartus ii进行简单介绍.<br><a id="more"></a></p>
-<h1 id="安装前的准备">安装前的准备</h1><p>对于个人学习,Web版的足够用了.这个版本是免费的,自然也就没有什么版权问题,会有一定的功能限制.在这我用的是Quartus ii 13.0.可以在官网上免费下载,只需注册一下就好了.<br>地址:</p>
-<blockquote>
-<p><a href="http://dl.altera.com/?edition=subscription" target="_blank" rel="external">http://dl.altera.com/?edition=subscription</a></p>
+        <span itemprop="articleBody"><h1 id="铺垫">铺垫</h1><blockquote>
+<p>今天逛知乎,发现一款小工具叫FZF.于是特意查了一下据说速度是Find的2**n,评价还不错,但毕竟不是亲身体验,不敢乱说,就想亲自体验一把在评价,结果问题来了.因为我是Arch用户习惯了在AUR上拽包安装,当然也可以从Github上clone下来安装.<br><a id="more"></a></p>
 </blockquote>
-<p>一定要选中linux版的,别下载完了发现是windows版的,到时候哭笑不得.还有就是它有”Combined Files”(组合文件)和”IndividualFile”(独立文件)之分,我下的是组合文件,为了安装时方便.</p>
-<h1 id="安装">安装</h1><p>先建立一个临时文件夹,如temp.将下载的.tar压缩包copy进去,用tar命令进行解压</p>
-<pre><code><span class="tag">tar</span> <span class="tag">-xvf</span> <span class="tag">Quartus-web-13</span><span class="class">.0</span><span class="class">.0</span><span class="class">.156-linux</span><span class="class">.tar</span>
-</code></pre><p>此时在temp目录下会有一个components目录和setup.sh安装脚本,运行setup.sh脚本</p>
-<pre><code>./<span class="title">setup</span>.sh
-</code></pre><p>进入安装向导,按照正常的程序安装流程一步步进行,<strong>注意</strong>安装路径不能有中文且建议用默认的安装路径,就我了解Quartus ii 对路径比较敏感.</p>
-<h1 id="Signaltap_ii">Signaltap ii</h1><p>web版的signaltap ii需要额外的配置,具体移步官网的解决方法</p>
-<pre><code><span class="symbol">https:</span>/<span class="regexp">/www.altera.com/support</span><span class="regexp">/support-resources/knowledge</span>-base/solutions/rd06202008_168.html
-</code></pre><h1 id="端口配置">端口配置</h1><h2 id="USB-blaster">USB-blaster</h2><p>别以为到此软件就安装完成了,要想将你写的程序下载到板子里,还要有相应的usb-blaster配置,配置如下:新建/etc/udev/51-usb-blaster.rules </p>
-<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># USB-<span class="keyword">Blaster</span><br><span class="line"></span><span class="keyword">SUBSYSTEM=="usb", </span><span class="preprocessor">ATTR</span>&#123;idVendor&#125;==<span class="string">"09fb"</span>, <span class="preprocessor">ATTR</span>&#123;idProduct&#125;==<span class="string">"6001"</span>, MODE=<span class="string">"0666"</span>, SYMLINK+=<span class="string">"usbblaster"</span></span><br></pre></td></tr></table></figure>
-<p>不出意外,现在就能正常下载程序了.<br>完事了? NO!</p>
-<h2 id="signaltap_ii">signaltap ii</h2><p> 在进行signaltap ii 调试的时候可能会遇到”statue”处于”Invalid data received” 状态.表现为点击”run analyzer” 后接收不到信号就停止了.此时需要在51-usb-blaster.rules文件后面加上一下配置:</p>
-<figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"> # USB-Blaster</span><br><span class="line">BUS==<span class="string">"usb"</span>, SYSFS<span class="list">&#123;idVendor&#125;</span>==<span class="string">"09fb"</span>, SYSFS<span class="list">&#123;idProduct&#125;</span>==<span class="string">"6001"</span>, MODE=<span class="string">"0666"</span></span><br><span class="line">BUS==<span class="string">"usb"</span>, SYSFS<span class="list">&#123;idVendor&#125;</span>==<span class="string">"09fb"</span>, SYSFS<span class="list">&#123;idProduct&#125;</span>==<span class="string">"6002"</span>, MODE=<span class="string">"0666"</span></span><br><span class="line">BUS==<span class="string">"usb"</span>, SYSFS<span class="list">&#123;idVendor&#125;</span>==<span class="string">"09fb"</span>, SYSFS<span class="list">&#123;idProduct&#125;</span>==<span class="string">"6003"</span>, MODE=<span class="string">"0666"</span></span><br><span class="line"></span><br><span class="line"># USB-Blaster II</span><br><span class="line">BUS==<span class="string">"usb"</span>, SYSFS<span class="list">&#123;idVendor&#125;</span>==<span class="string">"09fb"</span>, SYSFS<span class="list">&#123;idProduct&#125;</span>==<span class="string">"6010"</span>, MODE=<span class="string">"0666"</span></span><br><span class="line">BUS==<span class="string">"usb"</span>, SYSFS<span class="list">&#123;idVendor&#125;</span>==<span class="string">"09fb"</span>, SYSFS<span class="list">&#123;idProduct&#125;</span>==<span class="string">"6810"</span>, MODE=<span class="string">"0666"</span></span><br></pre></td></tr></table></figure>
-<p>在进行signaltap ii 调试时是不是就恢复正常了呢.</p>
-<h1 id="解决Bug">解决Bug</h1><p>unix/linux 下的软件容易出问题的就是依赖库的问题了quartus ii自然也少不了.有一次刚打开软件就出现致命错误,试了好几次结果相同,官网一查发现类似错误有不少.我就想了,平时用的好好的,怎么突然就出问题了呢,是不是配置出问题里,索性我就将用户(也就是我自己了)根目录下.altera.quartus目录里的配置文件全删除了.结果,结果就好用了,至少我的是这样.</p>
-<h1 id="Summary">Summary</h1><p>就这么多吧!</p>
-</span>
+<h1 id="错误出现">错误出现</h1><p>当编译安装包时出现了下面的错误:</p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">-&gt;building...</span><br><span class="line"><span class="comment"># github.com/junegunn/fzf/src/curses</span></span><br><span class="line">/usr/<span class="class"><span class="keyword">lib</span>/<span class="title">ld</span>: <span class="title">cannot</span> <span class="title">find</span> -<span class="title">lncursesw</span></span></span><br><span class="line"><span class="symbol">collect2:</span>错误<span class="symbol">:</span> ld 返回 <span class="number">1</span></span><br><span class="line">==&gt;错误<span class="symbol">:</span> 在build()中发生一个错误.</span><br><span class="line">   正在放弃...........</span><br></pre></td></tr></table></figure>
+<p>上面的错误重点在</p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/<span class="class"><span class="keyword">lib</span>/<span class="title">ld</span>: <span class="title">cannot</span> <span class="title">find</span> -<span class="title">lncursesw</span></span></span><br></pre></td></tr></table></figure>
+<h1 id="错误分析">错误分析</h1><p>原因可能有以下几种:</p>
+<ul>
+<li>缺少对应的库</li>
+<li>未能正确链接对应的库</li>
+<li>库的路径问题</li>
+</ul>
+<h1 id="解决方案">解决方案</h1><h2 id="缺少对应的库">缺少对应的库</h2><p>对于这个错误,解决方法比较直接.只需将缺少的库安装上就好了,但是在安装之前先检查一下该库是否尚未安装.即执行:</p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>cd /usr/<span class="class"><span class="keyword">lib</span>        //进入存放库的目录</span></span><br><span class="line"><span class="variable">$ </span>ls -l libxxxx*</span><br></pre></td></tr></table></figure>
+<p>其中xxxx是报错时的库我的是ncursesw,如果存在libxxxx.so或libxxxx.so.x等前面是libxxxx的字样请跳到 &lt;未能正确链接对应的库&gt;.如果不存在就安装相应的库,对于Arch用户在AUR里基本上可以找到你需要的库.</p>
+<h2 id="未能正确链接对应的库">未能正确链接对应的库</h2><p>如果/usr/lib/里含有该库还是报错,那可能就是链接问题.例如对于我的错误来说,我的/usr/lib/里含有libncursesw.so.6和libncursesw.so.6.0文件但是它还是报错,这种情况下只需进行一次链接操作就解决问题了:<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo <span class="keyword">ln</span> -<span class="keyword">s</span> libncursesw.<span class="keyword">so</span>.<span class="number">6</span> libncursesw.<span class="keyword">so</span></span><br></pre></td></tr></table></figure></p>
+<p>如果安装时还有错,请继续往下看.</p>
+<h2 id="库的路径问题">库的路径问题</h2><p>在/usr/lib/目录下大部分都是动态链接库(即*.so*文件)为了让系统共享动态链接库,就需要ld.so.conf,ld.so.cache,以及ld.so.conf.d目录下的配置文件来进行索引(这些文件在/etc目录下),所以对于路径问题只需在ld.so.conf.d目录下新建一个.conf文件,将libxxxx所在的路径写进去就行了,关于格式可以参考该目录下的其他.conf文件.因为我的libncursesw.so在/usr/lib目录下(一般的库都在这),所以在/etc/ld.so.conf.d/目录下新建文件lib.conf,内容如下:<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/<span class="class"><span class="keyword">lib</span>    //仅此一句</span></span><br></pre></td></tr></table></figure></p>
+<p>最后要对新的配置文件进行更新,以root身份执行:<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>ldconfig</span><br></pre></td></tr></table></figure></p>
+<h1 id="Over">Over</h1></span>
       
     </div>
 
@@ -245,7 +247,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/FPGA/" rel="tag">#FPGA</a>
+            <a href="/tags/Errors/" rel="tag">#Errors</a>
           
         </div>
       
@@ -254,13 +256,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/10/20/2015-10-20-Verilog-frequent/" rel="prev">基于Verilog的频率计</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/10/02/2015-10-02-Cadence-install/" rel="next">Cadence-install</a>
+              <a href="/2015/10/25/2015-10-25-Scheduling-algorithms/" rel="next">Scheduling-algorithms</a>
             
           </div>
         </div>
@@ -370,7 +370,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Quartus_ii"><span class="nav-number">1.</span> <span class="nav-text">Quartus ii</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装前的准备"><span class="nav-number">2.</span> <span class="nav-text">安装前的准备</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装"><span class="nav-number">3.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Signaltap_ii"><span class="nav-number">4.</span> <span class="nav-text">Signaltap ii</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#端口配置"><span class="nav-number">5.</span> <span class="nav-text">端口配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#USB-blaster"><span class="nav-number">5.1.</span> <span class="nav-text">USB-blaster</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#signaltap_ii"><span class="nav-number">5.2.</span> <span class="nav-text">signaltap ii</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解决Bug"><span class="nav-number">6.</span> <span class="nav-text">解决Bug</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Summary"><span class="nav-number">7.</span> <span class="nav-text">Summary</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#铺垫"><span class="nav-number">1.</span> <span class="nav-text">铺垫</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#错误出现"><span class="nav-number">2.</span> <span class="nav-text">错误出现</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#错误分析"><span class="nav-number">3.</span> <span class="nav-text">错误分析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解决方案"><span class="nav-number">4.</span> <span class="nav-text">解决方案</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#缺少对应的库"><span class="nav-number">4.1.</span> <span class="nav-text">缺少对应的库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#未能正确链接对应的库"><span class="nav-number">4.2.</span> <span class="nav-text">未能正确链接对应的库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#库的路径问题"><span class="nav-number">4.3.</span> <span class="nav-text">库的路径问题</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Over"><span class="nav-number">5.</span> <span class="nav-text">Over</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
