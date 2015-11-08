@@ -47,7 +47,7 @@
 <meta property="og:site_name" content="Mstones">
 <meta property="og:description" content="铺垫
 今天逛知乎,发现一款小工具叫FZF.于是特意查了一下据说速度是Find的2**n,评价还不错,但毕竟不是亲身体验,不敢乱说,就想亲自体验一把在评价,结果问题来了.因为我是Arch用户习惯了在AUR上拽包安装,当然也可以从Github上clone下来安装.">
-<meta property="og:updated_time" content="2015-11-08T07:56:07.535Z">
+<meta property="og:updated_time" content="2015-11-08T08:04:53.409Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="/usr/lib/ld; cannot find -lxxxx">
 <meta name="twitter:description" content="铺垫
@@ -239,7 +239,8 @@
 <p>如果安装时还有错,请继续往下看.</p>
 <h2 id="库的路径问题">库的路径问题</h2><p>在/usr/lib/目录下大部分都是动态链接库(即*.so*文件)为了让系统共享动态链接库,就需要ld.so.conf,ld.so.cache,以及ld.so.conf.d目录下的配置文件来进行索引(这些文件在/etc目录下),所以对于路径问题只需在ld.so.conf.d目录下新建一个.conf文件,将libxxxx所在的路径写进去就行了,关于格式可以参考该目录下的其他.conf文件.因为我的libncursesw.so在/usr/lib目录下(一般的库都在这),所以在/etc/ld.so.conf.d/目录下新建文件lib.conf,内容如下:<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/<span class="class"><span class="keyword">lib</span>    //仅此一句</span></span><br></pre></td></tr></table></figure></p>
 <p>最后要对新的配置文件进行更新,以root身份执行:<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>ldconfig</span><br></pre></td></tr></table></figure></p>
-<h1 id="Over">Over</h1></span>
+<h1 id="End">End</h1><p>最后体验了一把FZF,真心比Find 好用,感动哭了都.</p>
+</span>
       
     </div>
 
@@ -370,7 +371,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#铺垫"><span class="nav-number">1.</span> <span class="nav-text">铺垫</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#错误出现"><span class="nav-number">2.</span> <span class="nav-text">错误出现</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#错误分析"><span class="nav-number">3.</span> <span class="nav-text">错误分析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解决方案"><span class="nav-number">4.</span> <span class="nav-text">解决方案</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#缺少对应的库"><span class="nav-number">4.1.</span> <span class="nav-text">缺少对应的库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#未能正确链接对应的库"><span class="nav-number">4.2.</span> <span class="nav-text">未能正确链接对应的库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#库的路径问题"><span class="nav-number">4.3.</span> <span class="nav-text">库的路径问题</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Over"><span class="nav-number">5.</span> <span class="nav-text">Over</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#铺垫"><span class="nav-number">1.</span> <span class="nav-text">铺垫</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#错误出现"><span class="nav-number">2.</span> <span class="nav-text">错误出现</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#错误分析"><span class="nav-number">3.</span> <span class="nav-text">错误分析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解决方案"><span class="nav-number">4.</span> <span class="nav-text">解决方案</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#缺少对应的库"><span class="nav-number">4.1.</span> <span class="nav-text">缺少对应的库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#未能正确链接对应的库"><span class="nav-number">4.2.</span> <span class="nav-text">未能正确链接对应的库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#库的路径问题"><span class="nav-number">4.3.</span> <span class="nav-text">库的路径问题</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#End"><span class="nav-number">5.</span> <span class="nav-text">End</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
