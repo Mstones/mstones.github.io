@@ -30,7 +30,7 @@
 
 
 
-  <meta name="keywords" content="Errors," />
+  <meta name="keywords" content="IC," />
 
 
 
@@ -39,19 +39,17 @@
   <link rel="shorticon icon" type="image/x-icon" href="/images/M.jpg?v=0.4.5.1" />
 
 
-<meta name="description" content="铺垫
-今天逛知乎,发现一款小工具叫FZF.于是特意查了一下据说速度是Find的2**n,评价还不错,但毕竟不是亲身体验,不敢乱说,就想亲自体验一把在评价,结果问题来了.因为我是Arch用户习惯了在AUR上拽包安装,当然也可以从Github上clone下来安装.">
+<meta name="description" content="简介VCS是编译型Verilog模拟器，它完全支持OVI标准的Verilog HDL语言、PLI和SDF。 VCS具有目前行业中最高的模拟性能，其出色的内存管理能力足以支持千万门级的ASIC设计。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="/usr/lib/ld; cannot find -lxxxx">
-<meta property="og:url" content="mstones.github.io/2015/11/08/2015-11-08-cannot-find-lib/index.html">
+<meta property="og:title" content="VCS初体验">
+<meta property="og:url" content="mstones.github.io/2015/11/24/2015-11-24-vcs/index.html">
 <meta property="og:site_name" content="Mstones">
-<meta property="og:description" content="铺垫
-今天逛知乎,发现一款小工具叫FZF.于是特意查了一下据说速度是Find的2**n,评价还不错,但毕竟不是亲身体验,不敢乱说,就想亲自体验一把在评价,结果问题来了.因为我是Arch用户习惯了在AUR上拽包安装,当然也可以从Github上clone下来安装.">
-<meta property="og:updated_time" content="2015-11-08T08:04:53.409Z">
+<meta property="og:description" content="简介VCS是编译型Verilog模拟器，它完全支持OVI标准的Verilog HDL语言、PLI和SDF。 VCS具有目前行业中最高的模拟性能，其出色的内存管理能力足以支持千万门级的ASIC设计。">
+<meta property="og:image" content="http://ww3.sinaimg.cn/mw690/b76d2d05jw1eyc4v642fqj20c50higo3.jpg">
+<meta property="og:updated_time" content="2015-11-24T08:17:20.957Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="/usr/lib/ld; cannot find -lxxxx">
-<meta name="twitter:description" content="铺垫
-今天逛知乎,发现一款小工具叫FZF.于是特意查了一下据说速度是Find的2**n,评价还不错,但毕竟不是亲身体验,不敢乱说,就想亲自体验一把在评价,结果问题来了.因为我是Arch用户习惯了在AUR上拽包安装,当然也可以从Github上clone下来安装.">
+<meta name="twitter:title" content="VCS初体验">
+<meta name="twitter:description" content="简介VCS是编译型Verilog模拟器，它完全支持OVI标准的Verilog HDL语言、PLI和SDF。 VCS具有目前行业中最高的模拟性能，其出色的内存管理能力足以支持千万门级的ASIC设计。">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -61,7 +59,7 @@
   };
 </script>
 
-  <title> /usr/lib/ld; cannot find -lxxxx | Mstones </title>
+  <title> VCS初体验 | Mstones </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -176,7 +174,7 @@
           
           
             
-              /usr/lib/ld; cannot find -lxxxx
+              VCS初体验
             
           
         </h1>
@@ -185,8 +183,8 @@
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-11-08T15:29:41+08:00" content="2015-11-08">
-            2015-11-08
+          <time itemprop="dateCreated" datetime="2015-11-24T14:13:42+08:00" content="2015-11-24">
+            2015-11-24
           </time>
         </span>
 
@@ -195,8 +193,8 @@
             &nbsp; | &nbsp; 分类于
             
               <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/Arch/" itemprop="url" rel="index">
-                  <span itemprop="name">Arch</span>
+                <a href="/categories/VCS/" itemprop="url" rel="index">
+                  <span itemprop="name">VCS</span>
                 </a>
               </span>
 
@@ -219,27 +217,18 @@
       
 
       
-        <span itemprop="articleBody"><h1 id="铺垫">铺垫</h1><blockquote>
-<p>今天逛知乎,发现一款小工具叫FZF.于是特意查了一下据说速度是Find的2**n,评价还不错,但毕竟不是亲身体验,不敢乱说,就想亲自体验一把在评价,结果问题来了.因为我是Arch用户习惯了在AUR上拽包安装,当然也可以从Github上clone下来安装.<br><a id="more"></a></p>
-</blockquote>
-<h1 id="错误出现">错误出现</h1><p>当编译安装包时出现了下面的错误:</p>
-<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">-&gt;building...</span><br><span class="line"><span class="comment"># github.com/junegunn/fzf/src/curses</span></span><br><span class="line">/usr/<span class="class"><span class="keyword">lib</span>/<span class="title">ld</span>: <span class="title">cannot</span> <span class="title">find</span> -<span class="title">lncursesw</span></span></span><br><span class="line"><span class="symbol">collect2:</span>错误<span class="symbol">:</span> ld 返回 <span class="number">1</span></span><br><span class="line">==&gt;错误<span class="symbol">:</span> 在build()中发生一个错误.</span><br><span class="line">   正在放弃...........</span><br></pre></td></tr></table></figure>
-<p>上面的错误重点在</p>
-<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/<span class="class"><span class="keyword">lib</span>/<span class="title">ld</span>: <span class="title">cannot</span> <span class="title">find</span> -<span class="title">lncursesw</span></span></span><br></pre></td></tr></table></figure>
-<h1 id="错误分析">错误分析</h1><p>原因可能有以下几种:</p>
-<ul>
-<li>缺少对应的库</li>
-<li>未能正确链接对应的库</li>
-<li>库的路径问题</li>
-</ul>
-<h1 id="解决方案">解决方案</h1><h2 id="缺少对应的库">缺少对应的库</h2><p>对于这个错误,解决方法比较直接.只需将缺少的库安装上就好了,但是在安装之前先检查一下该库是否尚未安装.即执行:</p>
-<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>cd /usr/<span class="class"><span class="keyword">lib</span>        //进入存放库的目录</span></span><br><span class="line"><span class="variable">$ </span>ls -l libxxxx*</span><br></pre></td></tr></table></figure>
-<p>其中xxxx是报错时的库我的是ncursesw,如果存在libxxxx.so或libxxxx.so.x等前面是libxxxx的字样请跳到 &lt;未能正确链接对应的库&gt;.如果不存在就安装相应的库,对于Arch用户在AUR里基本上可以找到你需要的库.</p>
-<h2 id="未能正确链接对应的库">未能正确链接对应的库</h2><p>如果/usr/lib/里含有该库还是报错,那可能就是链接问题.例如对于我的错误来说,我的/usr/lib/里含有libncursesw.so.6和libncursesw.so.6.0文件但是它还是报错,这种情况下只需进行一次链接操作就解决问题了:<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo <span class="keyword">ln</span> -<span class="keyword">s</span> libncursesw.<span class="keyword">so</span>.<span class="number">6</span> libncursesw.<span class="keyword">so</span></span><br></pre></td></tr></table></figure></p>
-<p>如果安装时还有错,请继续往下看.</p>
-<h2 id="库的路径问题">库的路径问题</h2><p>在/usr/lib/目录下大部分都是动态链接库(即*.so*文件)为了让系统共享动态链接库,就需要ld.so.conf,ld.so.cache,以及ld.so.conf.d目录下的配置文件来进行索引(这些文件在/etc目录下),所以对于路径问题只需在ld.so.conf.d目录下新建一个.conf文件,将libxxxx所在的路径写进去就行了,关于格式可以参考该目录下的其他.conf文件.因为我的libncursesw.so在/usr/lib目录下(一般的库都在这),所以在/etc/ld.so.conf.d/目录下新建文件lib.conf,内容如下:<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/<span class="class"><span class="keyword">lib</span>    //仅此一句</span></span><br></pre></td></tr></table></figure></p>
-<p>最后要对新的配置文件进行更新,以root身份执行:<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>ldconfig</span><br></pre></td></tr></table></figure></p>
-<h1 id="End">End</h1><p>最后体验了一把FZF,真心比Find 好用,感动哭了都.</p>
+        <span itemprop="articleBody"><h2 id="简介">简介</h2><p>VCS是编译型Verilog模拟器，它完全支持OVI标准的Verilog HDL语言、PLI和SDF。 VCS具有目前行业中最高的模拟性能，其出色的内存管理能力足以支持千万门级的ASIC设计。<a id="more"></a>VCS集成了Virsim图形用户界面，它提供了对模拟结果的交互和后处理分析。VCS 2009.12 Linux 验证库是业界范围最广的基于标准的验证IP产品组合，可以方便地集成到Verilog、SystmVerilog、VHDL和Openvera的测试平台中，用于生成总线通信以及协议违反检查(本段摘自TOMEDA网,详情移步<a href="http://www.tomeda.com.cn/news/pronews/2010/new3.htm" target="_blank" rel="external">TOMEDA</a>))</p>
+<h2 id="准备">准备</h2><p>此次实验主要以&lt;&lt;验证与vcs使用&gt;&gt;一文为指导,以自己写的uart模块verilog代码为实验对象.关于vcs的工作方式,运行方式等在该文中都有介绍,在此不再多说,这里以uart模块为例简单了解vcs工作过程.如需该文,可在eetop上搜索下载,也可以邮件call我.</p>
+<h2 id="进入实验">进入实验</h2><h3 id="Step1">Step1</h3><p> 找一台装有vcs的机器,将你要仿真验证的工程拷贝进去,你的工程文件里应该包含设计文件和验证文件等,打开终端然后进入工程目录.用图形方式启动vcs,在启动时加上参数-RI.</p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>vcs -<span class="constant">RI</span> *.v</span><br></pre></td></tr></table></figure>
+<p>这样vcs会对该目录下的所有.v文件进行编译,如果各个模块之间有调用的话,它会自动检索并调用.但是值得注意的是我运行的时候提示错误</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Error-[V2KS] Verilog <span class="number">2000</span> IEEE <span class="number">1364</span>-<span class="number">2000</span> syntax used. Please compile with +v2k</span><br><span class="line">        to support <span class="keyword">this</span> construct</span><br><span class="line">        Ansi style port declaration.</span><br><span class="line">        <span class="string">"control.v"</span>, <span class="number">7</span></span><br></pre></td></tr></table></figure>
+<p>提示错误是需要用verilog 2000标准去编译,即加上+v2k 参数</p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>vcs +v2k -<span class="constant">RI</span> *.v</span><br></pre></td></tr></table></figure>
+<p>如果编译通过会弹出Virsim窗口如图<br><img src="http://ww3.sinaimg.cn/mw690/b76d2d05jw1eyc4v642fqj20c50higo3.jpg" alt="step1"></p>
+<h3 id="Step2">Step2</h3><p>点击上图绿色箭头运行仿真.然后根据教程,分别调出hierarchy窗口,wareform窗口,logic窗口,register窗口,source窗口.其中hierarchy窗口类似与一个查看器,能够表示出你设计模块的层次结构,当选中其中一个模块时,按住鼠标中键拖进打开的对应窗口就会显示相应的功能.例如拖进source窗口里就会显示对应的verilog代码.另外在第一个弹出的窗口里的history栏有仿真报告,可以查看整个仿真过程.</p>
+<h3 id="Step3">Step3</h3><p>其他功能可以参考教程详细操作.</p>
+<h2 id="总结">总结</h2><p>对于一些新接触的EDA软件,要想快速学习,首先就是要找到对应的Lab_Guide.然后根据Lab_Guide进行仔细的操作和研读,以达到熟练程度.</p>
 </span>
       
     </div>
@@ -248,7 +237,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Errors/" rel="tag">#Errors</a>
+            <a href="/tags/IC/" rel="tag">#IC</a>
           
         </div>
       
@@ -257,13 +246,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/11/24/2015-11-24-vcs/" rel="prev">VCS初体验</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/10/25/2015-10-25-Scheduling-algorithms/" rel="next">Scheduling-algorithms</a>
+              <a href="/2015/11/08/2015-11-08-cannot-find-lib/" rel="next">/usr/lib/ld; cannot find -lxxxx</a>
             
           </div>
         </div>
@@ -373,7 +360,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#铺垫"><span class="nav-number">1.</span> <span class="nav-text">铺垫</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#错误出现"><span class="nav-number">2.</span> <span class="nav-text">错误出现</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#错误分析"><span class="nav-number">3.</span> <span class="nav-text">错误分析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解决方案"><span class="nav-number">4.</span> <span class="nav-text">解决方案</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#缺少对应的库"><span class="nav-number">4.1.</span> <span class="nav-text">缺少对应的库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#未能正确链接对应的库"><span class="nav-number">4.2.</span> <span class="nav-text">未能正确链接对应的库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#库的路径问题"><span class="nav-number">4.3.</span> <span class="nav-text">库的路径问题</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#End"><span class="nav-number">5.</span> <span class="nav-text">End</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#准备"><span class="nav-number">2.</span> <span class="nav-text">准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#进入实验"><span class="nav-number">3.</span> <span class="nav-text">进入实验</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Step1"><span class="nav-number">3.1.</span> <span class="nav-text">Step1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Step2"><span class="nav-number">3.2.</span> <span class="nav-text">Step2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Step3"><span class="nav-number">3.3.</span> <span class="nav-text">Step3</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
