@@ -45,7 +45,7 @@
 <meta property="og:url" content="mstones.github.io/2016/06/20/2016-6-20-linux_commond_rm_to_mv/index.html">
 <meta property="og:site_name" content="Mstones">
 <meta property="og:description" content="马有失蹄,今天用 rm 指令误删了一个重要的文件,虽然有备份,但是让我感受到深深的恐惧,以前在一些论坛上看到过类似的帖子,还笑话他们手笨.只有当事情发生在自己身上是才会长记性.今天就彻底解决这件事.">
-<meta property="og:updated_time" content="2016-06-20T13:06:21.749Z">
+<meta property="og:updated_time" content="2016-06-20T13:07:22.772Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="change rm to mv">
 <meta name="twitter:description" content="马有失蹄,今天用 rm 指令误删了一个重要的文件,虽然有备份,但是让我感受到深深的恐惧,以前在一些论坛上看到过类似的帖子,还笑话他们手笨.只有当事情发生在自己身上是才会长记性.今天就彻底解决这件事.">
@@ -232,8 +232,10 @@
 <figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p ~/.trash</span><br><span class="line">alias rm=trash</span><br><span class="line">alias r=trash</span><br><span class="line">alias rl=<span class="string">'ls ~/.trash'</span></span><br><span class="line">alias ur=undelfile</span><br><span class="line">undelfile()</span><br><span class="line">&#123;</span><br><span class="line">    mv -i ~/.trash/$@ ./</span><br><span class="line">&#125;</span><br><span class="line">trash()</span><br><span class="line">&#123;</span><br><span class="line">    mv $@ ~/.trash/</span><br><span class="line">&#125;</span><br><span class="line"> cleartrash()</span><br><span class="line"> &#123;</span><br><span class="line">    read -p <span class="string">"clear sure?[n]"</span> confirm</span><br><span class="line">    [ <span class="variable">$confirm</span> == <span class="string">'y'</span> ] || [ <span class="variable">$confirm</span> == <span class="string">'Y'</span> ]  &amp;&amp; /bin/rm -rf ~/.trash/*</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
 <p>解释一下意思: 上面的代码就是说你登陆后他就会在你的用户根目录下创建一个隐藏文件夹.trash,当你执行rm命令时,其实是执行mv命令,将你要删除的文件移动到.trash中.这样你要删除的文件只是被移动到另一个文件夹里,然后你可以定期对.trash文件夹进行清空,这样就起到了一个缓冲作用.</p>
 <p>另两指令rl和ur就是查看回收站和和恢复文件.其中 ur指令用法为:</p>
-<p> $ ur 要回复的文件<br>此时在当前文件夹就会有你要恢复的文件</p>
-<p>再也不怕<br> $ rm -rf / </p>
+<p> $ ur 要回复的文件</p>
+<p>此时在当前文件夹就会有你要恢复的文件</p>
+<p>再也不怕 </p>
+<p> $ rm -rf / </p>
 </span>
       
     </div>
