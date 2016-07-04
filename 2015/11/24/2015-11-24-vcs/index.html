@@ -46,7 +46,7 @@
 <meta property="og:site_name" content="Mstones">
 <meta property="og:description" content="简介VCS是编译型Verilog模拟器，它完全支持OVI标准的Verilog HDL语言、PLI和SDF。 VCS具有目前行业中最高的模拟性能，其出色的内存管理能力足以支持千万门级的ASIC设计。">
 <meta property="og:image" content="http://ww3.sinaimg.cn/mw690/b76d2d05jw1eyc4v642fqj20c50higo3.jpg">
-<meta property="og:updated_time" content="2015-11-24T08:17:20.957Z">
+<meta property="og:updated_time" content="2016-07-04T02:27:24.519Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="VCS初体验">
 <meta name="twitter:description" content="简介VCS是编译型Verilog模拟器，它完全支持OVI标准的Verilog HDL语言、PLI和SDF。 VCS具有目前行业中最高的模拟性能，其出色的内存管理能力足以支持千万门级的ASIC设计。">
@@ -224,7 +224,7 @@
       
 
       
-        <span itemprop="articleBody"><h2 id="简介">简介</h2><p>VCS是编译型Verilog模拟器，它完全支持OVI标准的Verilog HDL语言、PLI和SDF。 VCS具有目前行业中最高的模拟性能，其出色的内存管理能力足以支持千万门级的ASIC设计。<a id="more"></a>VCS集成了Virsim图形用户界面，它提供了对模拟结果的交互和后处理分析。VCS 2009.12 Linux 验证库是业界范围最广的基于标准的验证IP产品组合，可以方便地集成到Verilog、SystmVerilog、VHDL和Openvera的测试平台中，用于生成总线通信以及协议违反检查(本段摘自TOMEDA网,详情移步<a href="http://www.tomeda.com.cn/news/pronews/2010/new3.htm" target="_blank" rel="external">TOMEDA</a>))</p>
+        <span itemprop="articleBody"><h2 id="简介">简介</h2><p>VCS是编译型Verilog模拟器，它完全支持OVI标准的Verilog HDL语言、PLI和SDF。 VCS具有目前行业中最高的模拟性能，其出色的内存管理能力足以支持千万门级的ASIC设计。<a id="more"></a>VCS集成了Virsim图形用户界面，它提供了对模拟结果的交互和后处理分析。VCS 2009.12 Linux 验证库是业界范围最广的基于标准的验证IP产品组合，可以方便地集成到Verilog、SystmVerilog、VHDL和Openvera的测试平台中，用于生成总线通信以及协议违反检查(本段摘自TOMEDA网,详情移步<a href="http://www.tomeda.com.cn/news/pronews/2010/new3.htm" target="_blank" rel="external"><font color="#0099ff">TOMEDA</font></a>))</p>
 <h2 id="准备">准备</h2><p>此次实验主要以&lt;&lt;验证与vcs使用&gt;&gt;一文为指导,以自己写的uart模块verilog代码为实验对象.关于vcs的工作方式,运行方式等在该文中都有介绍,在此不再多说,这里以uart模块为例简单了解vcs工作过程.如需该文,可在eetop上搜索下载,也可以邮件call我.</p>
 <h2 id="进入实验">进入实验</h2><h3 id="Step1">Step1</h3><p> 找一台装有vcs的机器,将你要仿真验证的工程拷贝进去,你的工程文件里应该包含设计文件和验证文件等,打开终端然后进入工程目录.用图形方式启动vcs,在启动时加上参数-RI.</p>
 <figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>vcs -<span class="constant">RI</span> *.v</span><br></pre></td></tr></table></figure>

@@ -45,7 +45,7 @@
 <meta property="og:url" content="mstones.github.io/2015/10/05/Quartus-ii-for-linux/index.html">
 <meta property="og:site_name" content="Mstones">
 <meta property="og:description" content="Quartus ii Quartus ii 对于FPGA开发的朋友应该不陌生,刚接触FPGA时,应该有很大部分朋友用的是它.在IC领域的用的操作环境几乎全是UNIX/Linux环境,下面就如何在linux下安装Quartus ii进行简单介绍.">
-<meta property="og:updated_time" content="2015-10-05T03:06:21.005Z">
+<meta property="og:updated_time" content="2016-07-04T02:31:21.595Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Quartus ii for linux">
 <meta name="twitter:description" content="Quartus ii Quartus ii 对于FPGA开发的朋友应该不陌生,刚接触FPGA时,应该有很大部分朋友用的是它.在IC领域的用的操作环境几乎全是UNIX/Linux环境,下面就如何在linux下安装Quartus ii进行简单介绍.">
@@ -226,7 +226,7 @@
         <span itemprop="articleBody"><h1 id="Quartus_ii">Quartus ii</h1><p> Quartus ii 对于FPGA开发的朋友应该不陌生,刚接触FPGA时,应该有很大部分朋友用的是它.在IC领域的用的操作环境几乎全是UNIX/Linux环境,下面就如何在linux下安装Quartus ii进行简单介绍.<br><a id="more"></a></p>
 <h1 id="安装前的准备">安装前的准备</h1><p>对于个人学习,Web版的足够用了.这个版本是免费的,自然也就没有什么版权问题,会有一定的功能限制.在这我用的是Quartus ii 13.0.可以在官网上免费下载,只需注册一下就好了.<br>地址:</p>
 <blockquote>
-<p><a href="http://dl.altera.com/?edition=subscription" target="_blank" rel="external">http://dl.altera.com/?edition=subscription</a></p>
+<p>[<font color="#0099ff">Altera_downloan</font>]<a href="http://dl.altera.com/?edition=subscription" target="_blank" rel="external">http://dl.altera.com/?edition=subscription</a></p>
 </blockquote>
 <p>一定要选中linux版的,别下载完了发现是windows版的,到时候哭笑不得.还有就是它有”Combined Files”(组合文件)和”IndividualFile”(独立文件)之分,我下的是组合文件,为了安装时方便.</p>
 <h1 id="安装">安装</h1><p>先建立一个临时文件夹,如temp.将下载的.tar压缩包copy进去,用tar命令进行解压</p>
@@ -235,8 +235,8 @@
 <pre><code>./<span class="title">setup</span>.sh
 </code></pre><p>进入安装向导,按照正常的程序安装流程一步步进行,<strong>注意</strong>安装路径不能有中文且建议用默认的安装路径,就我了解Quartus ii 对路径比较敏感.</p>
 <h1 id="Signaltap_ii">Signaltap ii</h1><p>web版的signaltap ii需要额外的配置,具体移步官网的解决方法</p>
-<pre><code><span class="symbol">https:</span>/<span class="regexp">/www.altera.com/support</span><span class="regexp">/support-resources/knowledge</span>-base/solutions/rd06202008_168.html
-</code></pre><h1 id="端口配置">端口配置</h1><h2 id="USB-blaster">USB-blaster</h2><p>别以为到此软件就安装完成了,要想将你写的程序下载到板子里,还要有相应的usb-blaster配置,配置如下:新建/etc/udev/51-usb-blaster.rules </p>
+<p>   [<font color="#0099ff">solution</font>]h <a href="https://www.altera.com/support/support-resources/knowledge-base/solutions/rd06202008_168.html" target="_blank" rel="external">https://www.altera.com/support/support-resources/knowledge-base/solutions/rd06202008_168.html</a></p>
+<h1 id="端口配置">端口配置</h1><h2 id="USB-blaster">USB-blaster</h2><p>别以为到此软件就安装完成了,要想将你写的程序下载到板子里,还要有相应的usb-blaster配置,配置如下:新建/etc/udev/51-usb-blaster.rules </p>
 <figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># USB-<span class="keyword">Blaster</span><br><span class="line"></span><span class="keyword">SUBSYSTEM=="usb", </span><span class="preprocessor">ATTR</span>&#123;idVendor&#125;==<span class="string">"09fb"</span>, <span class="preprocessor">ATTR</span>&#123;idProduct&#125;==<span class="string">"6001"</span>, MODE=<span class="string">"0666"</span>, SYMLINK+=<span class="string">"usbblaster"</span></span><br></pre></td></tr></table></figure>
 <p>不出意外,现在就能正常下载程序了.<br>完事了? NO!</p>
 <h2 id="signaltap_ii">signaltap ii</h2><p> 在进行signaltap ii 调试的时候可能会遇到”statue”处于”Invalid data received” 状态.表现为点击”run analyzer” 后接收不到信号就停止了.此时需要在51-usb-blaster.rules文件后面加上一下配置:</p>
